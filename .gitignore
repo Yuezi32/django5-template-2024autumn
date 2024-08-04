@@ -6,10 +6,10 @@ venv/**
 !venv/readme.md
 
 # 忽略env文件
-# .env
+.env
 
 # 忽略db.sqlite3文件
-# db.sqlite3
+db.sqlite3
 
 # 忽略日志log目录内的文件（readme.md除外）
 log/**

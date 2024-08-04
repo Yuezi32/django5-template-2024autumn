@@ -273,7 +273,7 @@ password: eff38392d709442340b2d65f9f1341db
 # 数据库类型(可选值：mysql或sqlite)
 DB_TYPE=sqlite
 ```
-#### 生产环境数据库配置
+### 生产环境数据库配置
 修改compose-production.yaml：
 ```
 ...（略）
