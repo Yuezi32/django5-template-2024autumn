@@ -1,0 +1,76 @@
+# 服务配置
+services:
+  # MySQL服务
+  mysql:
+    # 使用的镜像的名字
+    image: mysql:8.4.2
+    # 容器名称，相当于docker container run的--name
+    container_name: docker-django-mysql
+    # 挂载volumes，相当于docker container run的-v
+    volumes: 
+      - D:/docker-django/mysql:/var/lib/mysql
+    # networks，相当于docker container run的--network
+    networks: 
+      - docker-django
+    # 环境变量，相当于docker container run的--env
+    environment: 
+      - MYSQL_ROOT_PASSWORD=12345678
+    # 将Nginx容器的端口接通在宿主机上，冒号(:)前是宿主机、后是容器
+    ports: 
+      - 3306:3306
+    # 容器的服务端口(写在这里仅为了方便阅读)
+    expose:
+      - 3306
+  # Django API服务
+  django-server:
+    container_name: docker-django-api
+    build:
+      context: .
+      dockerfile: dockerfile
+    # 挂载volumes，相当于docker container run的-v
+    volumes: 
+      - D:/docker-django/log:/home/django-server/log
+    # 环境变量
+    environment: 
+      # 是否开启DEBUG模式
+      - DEBUG=False
+      # 数据库类型(可选值：mysql或sqlite)
+      - DB_TYPE=mysql
+      # MYSQL主机地址（处于同一个Docker Network内，可直接填写容器名称）
+      - DB_MYSQL_HOST=docker-django-mysql
+      # MYSQL数据库名称
+      - DB_MYSQL_NAME=my_django
+      # MYSQL账号
+      - DB_MYSQL_USER=root
+      # MYSQL密码
+      - DB_MYSQL_PASSWORD=12345678
+      # MYSQL端口
+      - DB_MYSQL_PORT=3306
+    networks: 
+      - docker-django
+    depends_on:
+      - mysql
+    # 容器的服务端口(写在这里仅为了方便阅读)
+    expose:
+      - 8000
+  # Web Nginx服务
+  web-nginx:
+    container_name: docker-django-nginx
+    build:
+      context: ./nginx
+      dockerfile: dockerfile
+    # 将Nginx容器的端口接通在宿主机上，冒号(:)前是宿主机、后是容器
+    ports: 
+      - 80:80
+    networks: 
+      - docker-django
+    depends_on:
+      - mysql
+
+# 网络配置    
+networks: 
+  docker-django:
+    # 创建自定义network名称
+    name: docker-django
+    # 使用此compose应用以外的network
+    external: true

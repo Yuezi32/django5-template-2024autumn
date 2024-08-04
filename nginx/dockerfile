@@ -1,0 +1,5 @@
+# 拉取Dockerhub官方Nginx镜像
+FROM nginx:latest
+
+# 复制Nginx配置文件到镜像
+COPY ./default.conf /etc/nginx/conf.d
