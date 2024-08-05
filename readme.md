@@ -9,7 +9,9 @@
 
 📚📚本项目有详细的讲解教程，原文请关注我的微信公众号【卧梅又闻花】📚📚
 
-[《2024金秋版：Django5开发与部署保姆级零基础教程》](https://mp.weixin.qq.com/s/2jVWohWr5vqXHrZhaM1nAQ)
+[《2024金秋版：Django5开发与部署保姆级零基础教程（上篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
+
+[《2024金秋版：Django5开发与部署保姆级零基础教程（下篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
 
 先看下目录了解本教程都有哪些内容。
 
@@ -318,5 +320,7 @@ python manage.py loaddata data.json
 
 💖 得“鱼🐟”，不如会“渔🎣”，原文请关注我的微信公众号【卧梅又闻花】💖
 
-[《2024金秋版：Django5开发与部署保姆级零基础教程》](https://mp.weixin.qq.com/s/2jVWohWr5vqXHrZhaM1nAQ)
+[《2024金秋版：Django5开发与部署保姆级零基础教程（上篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
+
+[《2024金秋版：Django5开发与部署保姆级零基础教程（下篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
 
