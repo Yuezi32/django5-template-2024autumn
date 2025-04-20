@@ -11,7 +11,7 @@
 
 [《2024金秋版：Django5开发与部署保姆级零基础教程（上篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
 
-[《2024金秋版：Django5开发与部署保姆级零基础教程（下篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
+[《2024金秋版：Django5开发与部署保姆级零基础教程（下篇）》](https://mp.weixin.qq.com/s/sm2dU5LwjHwVTSF8DcHUFA)
 
 先看下目录了解本教程都有哪些内容。
 
@@ -322,5 +322,5 @@ python manage.py loaddata data.json
 
 [《2024金秋版：Django5开发与部署保姆级零基础教程（上篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
 
-[《2024金秋版：Django5开发与部署保姆级零基础教程（下篇）》](https://mp.weixin.qq.com/s/fiYFT4ALxZWYIcquQpzI5w)
+[《2024金秋版：Django5开发与部署保姆级零基础教程（下篇）》](https://mp.weixin.qq.com/s/sm2dU5LwjHwVTSF8DcHUFA)
 
